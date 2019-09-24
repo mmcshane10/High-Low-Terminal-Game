@@ -15,7 +15,7 @@ class Game
 			Name = name;
 			Number = number;
 			Turns = 0;
-			MinValue = 0;
+			MinValue = 1;
 			MaxValue = 100;
 			ComputerGuess = 0;
 		}
@@ -40,6 +40,31 @@ class Game
 			else
 			{
 				Console.WriteLine("You have defeated the mighty computer. You win, " + Name + "!");
+				var arr = new[]
+							{
+							@"        _______________________         ",
+							@"        |       .--.--.       |         ",
+							@"        |  +   /|  |  |\   +  |         ",
+							@"        | +{+  ||.-o-.||  +}+ |         ",
+							@"        |  l   |/.-'-.\|   l  |         ",
+							@"        |--+-------+-------+--|         ",
+							@"        |  |.o. .o.|WwW WwW|  |         ",
+							@"        |  |`;`o`;`| wWwWw |  |         ",
+							@"        |  |  `;`  |   W   |  |         ",
+							@"        ;  |-------|-------|  ;         ",
+							@"         ; ; WwWWwW|.o..o. ; ;          ",
+							@"          \ \ W  W |`;``;`/ /           ",
+							@"           \ '. WwW|.o. .' /            ",
+							@"            '. `.w | `;` .'             ",
+							@"     *        '. `.|.` .'         *     ", 
+							@"    \Y_O_U_     '. | .'     _W_I_N/     ",                          
+							@"            \     '+'     /             ",
+							@"              V_I_N_C_I_S               ",      
+							};
+
+				Console.WriteLine("\n\n");
+				foreach(string line in arr )
+				Console.WriteLine(line);
 				Console.WriteLine("Lets play again");
 				StartGame();
 			}
@@ -59,6 +84,36 @@ class Game
 				else
 				{
 					Console.WriteLine("Why must you always lie.");
+					var arr = new[]
+								{
+								@"		 ____________								",
+								@"		|____________|_							",
+								@"		||--------|| | _________		",
+								@"		||- _     || |(CHEATER!)		",
+								@"		||    - _ || | ---------		",
+								@"		||       -|| |     //				",
+								@"		||        || O\    __				",
+								@"		||        ||  \\  (..)			",
+								@"		||        ||   \\_|  |_			",
+								@"		||        ||    \  \/  )		",
+								@"		||        ||     :    :|		",
+								@"		||        ||     :    :|		",
+								@"		||        ||     :====:O		",
+								@"		||        ||     (    )			",
+								@"		||__@@@@__||     | `' |			",
+								@"		|| @|..|@ ||     | || |			",
+								@"		||O@`=='@O||     | || |			",
+								@"		||_@\/\/@_||     |_||_|			",
+								@"	----------------   '_'`_`			",
+								@"	/________________\----------\	",
+								@"	|   GUILLOTINE   |-----------|",
+								@"	|  OF CASTLE EPICODUS        |",
+								@"	|____________________________|",     
+								};
+
+					Console.WriteLine("\n\n");
+					foreach(string line in arr )
+					Console.WriteLine(line);
 					EndGame();
 					return;
 				}
@@ -72,6 +127,36 @@ class Game
 				else
 				{
 					Console.WriteLine("Why must you always lie.");
+					var arr = new[]
+								{
+								@"		 ____________								",
+								@"		|____________|_							",
+								@"		||--------|| | _________		",
+								@"		||- _     || |(CHEATER!)		",
+								@"		||    - _ || | ---------		",
+								@"		||       -|| |     //				",
+								@"		||        || O\    __				",
+								@"		||        ||  \\  (..)			",
+								@"		||        ||   \\_|  |_			",
+								@"		||        ||    \  \/  )		",
+								@"		||        ||     :    :|		",
+								@"		||        ||     :    :|		",
+								@"		||        ||     :====:O		",
+								@"		||        ||     (    )			",
+								@"		||__@@@@__||     | `' |			",
+								@"		|| @|..|@ ||     | || |			",
+								@"		||O@`=='@O||     | || |			",
+								@"		||_@\/\/@_||     |_||_|			",
+								@"	----------------   '_'`_`			",
+								@"	/________________\----------\	",
+								@"	|   GUILLOTINE   |-----------|",
+								@"	|  OF CASTLE EPICODUS        |",
+								@"	|____________________________|",     
+								};
+
+					Console.WriteLine("\n\n");
+					foreach(string line in arr )
+					Console.WriteLine(line);
 					EndGame();
 					return;
 				}
@@ -148,6 +233,62 @@ public class Program
     Console.WriteLine("Enter a number between 1-100. I promise I won't peek! If I can't guess it in six turns, you win.");
 		int userNumber = int.Parse(Console.ReadLine());
 		Game newGame = new Game(userName, userNumber);
-		newGame.MakeComputerGuess();
+		if (userNumber < 0 || userNumber > 100)
+		{
+			Console.WriteLine("FOLLOW DIRECTIONS loser");
+			var arr = new[]
+            {
+						@"                           zeeeeee-	",
+						@"                          z$$$$$$'	",
+						@"                         d$$$$$$'		",
+						@"                        d$$$$$P			",
+						@"                       d$$$$$P			",
+						@"                      $$$$$$'				",
+						@"                    .$$$$$$'				",
+						@"                   .$$$$$$'					",
+						@"                  4$$$$$$$$$$$$$'		",
+						@"                 z$$$$$$$$$$$$$'		",
+						@"                '''''''3$$$$$'			",
+						@"                       z$$$$P				",
+						@"                      d$$$$'				",
+						@"                    .$$$$$'					",
+						@"                   z$$$$$'					",
+						@"                  z$$$$P						",
+						@"                 d$$$$$$$$$$'				",
+						@"                 *******$$$'				",
+						@"                      .$$$'					",
+						@"                     .$$'						",
+						@"                    4$P'						",
+						@"                   z$'							",
+						@"                  zP								",
+						@"                 z'									",
+						@"                /    								",
+						@"               ^										",
+						@"              _											",
+						@"            /   \										",
+						@"           | x x |									",
+						@"        \   \___/   /								",
+						@"         \____|____/								",
+						@"              |											",
+						@"              |											",
+						@"              |											",
+						@"             / \										",
+						@"            /   \										",
+						@"          _/     \_									",       
+            };
+			Console.WriteLine("\n\n");
+			foreach(string line in arr )
+			Console.WriteLine(line);
+			newGame.EndGame();
+		}
+		else
+		{
+			newGame.MakeComputerGuess();
+		}	
 	}
 }
+
+
+
+
+
