@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 class Game
 {
@@ -72,7 +71,7 @@ class Game
 
 		public void UpdateRange()
 		{
-			Console.WriteLine("Is the number Higher, Lower or am I correct? Respond with an \"h\", \"l\" or \"c\"");
+			Console.WriteLine("Is your number Higher, Lower or am I correct? Respond with an \"h\", \"l\" or \"c\"");
 			string userFeedback = Console.ReadLine();
 
 			if (userFeedback == "H" || userFeedback == "h")
@@ -86,29 +85,29 @@ class Game
 					Console.WriteLine("Why must you always lie.");
 					var arr = new[]
 								{
-								@"		 ____________								",
-								@"		|____________|_							",
-								@"		||--------|| | _________		",
-								@"		||- _     || |(CHEATER!)		",
-								@"		||    - _ || | ---------		",
-								@"		||       -|| |     //				",
-								@"		||        || O\    __				",
-								@"		||        ||  \\  (..)			",
-								@"		||        ||   \\_|  |_			",
-								@"		||        ||    \  \/  )		",
-								@"		||        ||     :    :|		",
-								@"		||        ||     :    :|		",
-								@"		||        ||     :====:O		",
-								@"		||        ||     (    )			",
-								@"		||__@@@@__||     | `' |			",
-								@"		|| @|..|@ ||     | || |			",
-								@"		||O@`=='@O||     | || |			",
-								@"		||_@\/\/@_||     |_||_|			",
-								@"	----------------   '_'`_`			",
+								@"	 ____________								",
+								@"	|____________|_							",
+								@"	||--------|| | _________		",
+								@"	||- _     || |(CHEATER!)		",
+								@"	||    - _ || | ---------		",
+								@"	||       -|| |     //				",
+								@"	||        || O\    __				",
+								@"	||        ||  \\  (..)			",
+								@"	||        ||   \\_|  |_			",
+								@"	||        ||    \  \/  )		",
+								@"	||        ||     :    :|		",
+								@"	||        ||     :    :|		",
+								@"	||        ||     :====:O		",
+								@"	||        ||     (    )			",
+								@"	||__@@@@__||     | `' |			",
+								@"	|| @|..|@ ||     | || |			",
+								@"	||O@`=='@O||     | || |			",
+								@"	||_@\/\/@_||     |_||_|			",
+								@"	 ________________(_)(_)     ",
 								@"	/________________\----------\	",
 								@"	|   GUILLOTINE   |-----------|",
 								@"	|  OF CASTLE EPICODUS        |",
-								@"	|____________________________|",     
+								@"	|____________________________|",   
 								};
 
 					Console.WriteLine("\n\n");
@@ -129,25 +128,25 @@ class Game
 					Console.WriteLine("Why must you always lie.");
 					var arr = new[]
 								{
-								@"		 ____________								",
-								@"		|____________|_							",
-								@"		||--------|| | _________		",
-								@"		||- _     || |(CHEATER!)		",
-								@"		||    - _ || | ---------		",
-								@"		||       -|| |     //				",
-								@"		||        || O\    __				",
-								@"		||        ||  \\  (..)			",
-								@"		||        ||   \\_|  |_			",
-								@"		||        ||    \  \/  )		",
-								@"		||        ||     :    :|		",
-								@"		||        ||     :    :|		",
-								@"		||        ||     :====:O		",
-								@"		||        ||     (    )			",
-								@"		||__@@@@__||     | `' |			",
-								@"		|| @|..|@ ||     | || |			",
-								@"		||O@`=='@O||     | || |			",
-								@"		||_@\/\/@_||     |_||_|			",
-								@"	----------------   '_'`_`			",
+								@"	 ____________								",
+								@"	|____________|_							",
+								@"	||--------|| | _________		",
+								@"	||- _     || |(CHEATER!)		",
+								@"	||    - _ || | ---------		",
+								@"	||       -|| |     //				",
+								@"	||        || O\    __				",
+								@"	||        ||  \\  (..)			",
+								@"	||        ||   \\_|  |_			",
+								@"	||        ||    \  \/  )		",
+								@"	||        ||     :    :|		",
+								@"	||        ||     :    :|		",
+								@"	||        ||     :====:O		",
+								@"	||        ||     (    )			",
+								@"	||__@@@@__||     | `' |			",
+								@"	|| @|..|@ ||     | || |			",
+								@"	||O@`=='@O||     | || |			",
+								@"	||_@\/\/@_||     |_||_|			",
+								@"	 ________________(_)(_)     ",
 								@"	/________________\----------\	",
 								@"	|   GUILLOTINE   |-----------|",
 								@"	|  OF CASTLE EPICODUS        |",
@@ -217,7 +216,58 @@ class Game
 			Console.WriteLine("Enter a number between 1-100. I promise I won't peek!");
 			int userNumber = int.Parse(Console.ReadLine());
 			Game newGame = new Game(userName, userNumber);
-			newGame.MakeComputerGuess();
+			if (userNumber > 0 && userNumber < 101)
+			{
+				newGame.MakeComputerGuess();
+			}
+			else
+			{
+				Console.WriteLine("FOLLOW DIRECTIONS loser");
+				var arr = new[]
+							{
+							@"                           zeeeeee-	",
+							@"                          z$$$$$$'	",
+							@"                         d$$$$$$'		",
+							@"                        d$$$$$P			",
+							@"                       d$$$$$P			",
+							@"                      $$$$$$'				",
+							@"                    .$$$$$$'				",
+							@"                   .$$$$$$'					",
+							@"                  4$$$$$$$$$$$$$'		",
+							@"                 z$$$$$$$$$$$$$'		",
+							@"                '''''''3$$$$$'			",
+							@"                       z$$$$P				",
+							@"                      d$$$$'				",
+							@"                    .$$$$$'					",
+							@"                   z$$$$$'					",
+							@"                  z$$$$P						",
+							@"                 d$$$$$$$$$$'				",
+							@"                 *******$$$'				",
+							@"                      .$$$'					",
+							@"                     .$$'						",
+							@"                    4$P'						",
+							@"                   z$'							",
+							@"                  zP								",
+							@"                 z'									",
+							@"                /    								",
+							@"               ^										",
+							@"              _											",
+							@"            /   \										",
+							@"           | x x |									",
+							@"        \   \___/   /								",
+							@"         \____|____/								",
+							@"              |											",
+							@"              |											",
+							@"              |											",
+							@"             / \										",
+							@"            /   \										",
+							@"          _/     \_									",       
+							};
+				Console.WriteLine("\n\n");
+				foreach(string line in arr )
+				Console.WriteLine(line);
+				newGame.EndGame();
+			}	
 		}
 }
 
@@ -233,7 +283,11 @@ public class Program
     Console.WriteLine("Enter a number between 1-100. I promise I won't peek! If I can't guess it in six turns, you win.");
 		int userNumber = int.Parse(Console.ReadLine());
 		Game newGame = new Game(userName, userNumber);
-		if (userNumber < 0 || userNumber > 100)
+		if (userNumber > 0 && userNumber < 101)
+		{
+			newGame.MakeComputerGuess();
+		}
+		else
 		{
 			Console.WriteLine("FOLLOW DIRECTIONS loser");
 			var arr = new[]
@@ -280,10 +334,6 @@ public class Program
 			foreach(string line in arr )
 			Console.WriteLine(line);
 			newGame.EndGame();
-		}
-		else
-		{
-			newGame.MakeComputerGuess();
 		}	
 	}
 }
